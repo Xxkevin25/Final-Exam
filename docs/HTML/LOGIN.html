@@ -84,12 +84,12 @@
 
         /* MODAL */
         .container {
-            /* position: relative; */
+            position: relative;
             /* width: 100%; */
             min-height: 100vh;
-            /* display: flex; */
-            /* justify-content: center; */
-            /* align-items: center; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
             /* background: #fff173; */
             transition: 0.5s;
             /* padding: 20px; */
@@ -102,7 +102,7 @@
         a {
             position: relative;
             padding: 10px 20px;
-            /* display: inline-block; */
+            display: inline-block;
             text-decoration: none;
             color: #fff;
             background: linear-gradient(#ED4C67, #833471);
@@ -132,7 +132,7 @@
         }
 
         #popup.active {
-            /* top: 50%; */
+            top: 50%;
             visibility: visible;
             opacity: 1;
             transition: 2.5s;
@@ -147,6 +147,12 @@
         .imach img {
             width: 125px;
             height: 150px;
+        }
+
+        @media screen and (max-width:400px){
+            #popup{
+                width: 50%;
+            }
         }
     </style>
 </head>
