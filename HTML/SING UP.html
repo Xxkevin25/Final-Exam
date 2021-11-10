@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/logox.png" type="image/x-icon">
+    <title>SING UP</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: url(https://images.unsplash.com/photo-1494122353634-c310f45a6d3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .box {
+            width: 300px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #6b6b6b5b;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .box h1 {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .box input[type="text"],
+        .box input[type="password"], .box input[type = "email"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #d63031;
+            padding: 14px 10px;
+            width: 200px;
+            outline: none;
+            color: #fff;
+            border-radius: 24px;
+            transition: 0.25s;
+        }
+
+        .box input[type="text"]:focus,
+        .box input[type="password"]:focus, .box input[type = "email"]:focus{
+            width: 280px;
+            border-color: #cd84f1;
+        }
+
+        .box input[type="button"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #1B1464;
+            padding: 14px 40px;
+            outline: none;
+            color: #fff;
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+
+        .box input[type = "button"]:hover{
+            background: #1B1464;
+        }
+
+        ::-webkit-scrollbar{
+            width: 0;
+        }
+        /* MODAL */
+        .container{
+            /* position: relative; */
+            /* width: 100%; */
+            min-height: 100vh;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* background: #fff173; */
+            transition: 0.5s;
+            /* padding: 20px; */
+        }
+        
+        h2{
+            color: #fff;
+        }
+
+        a{
+            position: relative;
+            padding: 10px 20px;
+            /* display: inline-block; */
+            text-decoration: none;
+            color: #fff;
+            background:linear-gradient(#ED4C67, #833471);
+            border-radius: 20px;
+        }
+
+        .container#blur.active{
+            filter: blur(20px);
+            pointer-events: none;
+            user-select: none;
+        }
+        #popup{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20%;
+            padding: 50px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+            background: linear-gradient(180deg, #D980FA, #9980FA, #5758BB);
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        #popup.active{
+            /* top: 50%; */
+            visibility: visible;
+            opacity: 1;
+            transition: 2.5s;
+        }
+
+        .imach{
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .imach img{
+            width: 125px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container"  id="blur">
+    <form class="box" action="#" method="#">
+        <h1>Login</h1>
+        <input type="text" name="" placeholder="Username">
+        <input type="email" name="" placeholder="Email">
+        <input type="password" name="" placeholder="Password">
+        <input type="password" name="" placeholder="Repeat Password">
+        <input onclick="toggle()" type="button" value="SING UP">
+    </form>
+</div>
+
+<div id="popup">
+    <div class="imach">
+        <img src="/img/popup.png" alt="">
+    </div>
+    <h2>You're already Sing Up</h2>
+        <a onclick="toggle()" href="#">Close</a>
+</div>
+
+
+<script>
+    function toggle() {
+        var blur = document.getElementById('blur');
+        blur.classList.toggle('active')
+        var popup = document.getElementById('popup');
+        popup.classList.toggle('active')
+    }
+</script>
+
+
+
+</body>
+
+</html>
