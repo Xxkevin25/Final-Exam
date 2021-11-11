@@ -691,7 +691,7 @@ footer {
     }
 
     .social {
-        margin-right: 10px;
+        margin-right: 20px;
     }
 
     .log,
@@ -901,7 +901,7 @@ footer {
 
 /* Tercer Repon. */
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:500px) {
 
     .buscar {
         width: 100px;
@@ -909,7 +909,7 @@ footer {
     }
 
     .social {
-        margin-right: 5px;
+        margin-right: 20px;
     }
 
     .log,
@@ -945,7 +945,7 @@ footer {
     }
 
     .main-img img {
-        width: 425px;
+        width: 375px;
     }
 
 
@@ -1097,9 +1097,9 @@ footer {
 
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:380px) {
     .buscar {
-        width: 70px;
+        width: 85px;
         font-size: xx-small;
     }
 
@@ -1108,12 +1108,12 @@ footer {
     }
 
     .social {
-        margin-right: 5px;
+        margin-right: 20px;
     }
 
     .log,
     .reg {
-        width: 45px;
+        width: 55px;
         margin: 0;
         font-size: xx-small;
     }
